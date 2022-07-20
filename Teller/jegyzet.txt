@@ -1,0 +1,153 @@
+1.  Nyissa meg aiz index.html állományt! Helyezzen el HTML5-ös dokumentumtípus definíciót az első sorba!
+
+<!DOCTYPE html>
+
+2. Állítsa be az oldal kódolását UTF-8-ra, a nyelvet magyarra!
+
+<html lang="'hu">
+
+<meta charset='utf-8'>   --->  Ez már a <head> tagek közé kerül !!!
+
+3.  Az index.html állományba helyezzen el hivatkozást a styles.css stíluslapra!
+
+<link href="style.css" rel='stylesheet' type="text/css">
+
+4. A böngésző címsorában megjelenő cím "Teller Ede" legyen!
+
+<title>Teller Ede</title>
+
+5. A tartalom azonosítójú keretben lévő szöveget sorolja bekezdésekbe a minta szerint, és alakítsa ki a h1 és h2 címsorszintű címeket!
+
+<p></p>
+<h1></h1>
+<h2></h2>
+
+6.  Alakítsa ki a számozatlan (felsorolt) listát a minta szerint!
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+<ul>
+
+7.  Helyezze el a Teller.png képet a tartalom azonosítójú keret első elemeként!
+    A kép azonosítója teller_kep legyen! Ha a kép fölé visszük az egeret, vagy a kép valamiért nem
+    jeleníthető meg, akkor mindkét esetben "Teller Ede" neve jelenjen meg!
+
+<img src="Teller.png" alt="Teller Ede" title="Teller Ede" id="teller_kep">
+
+8.  A bekezdésekben a "Teller" nevet emelje ki 800-as betűvastagsággal! A megoldáshoz használjon spam taget és 
+    megfelelő típusú szelektort! Oldja meg, ha a kurzort a kiemelt név fölé visszük, akkor színe váltson 
+    pirosra (red)! A CSS beállításokat a styles.css állományba helyezze el új szelektorok létrehozásával.
+
+    <span>Teller</span> 
+
+    span{
+  font-weight: 800;
+            }
+
+    span:hover{
+    color: red;
+            }     
+
+9.    Alakítsa ki a táblázatot a minta szerint! Formázásához később talál információt. A táblázathoz rendelje
+      a table, table-striped és a table-hover Bootstrap osztályokat! Az első oszlopban lévő cellák fejléccella típusúak 
+      legyenek!
+
+      <table class="table table-striped table-hover">
+						<tr>
+							<th>Született</th>
+							<td>1908. január 15.<br>Budapest</td>
+						</tr>
+						<tr>
+							<th>Elhunyt</th>
+							<td>2003. szeptember 9. (95 évesen)<br>Stanford, Kalifornia</td>
+						</tr>
+						<tr>
+							<th>Nemzetisége</th>
+							<td>magyar</td>
+						</tr>
+						<tr>
+							<th>Állampolgársága</th>
+							<td>magyar, amerikai</td>
+						</tr>
+						<tr>
+							<th>Foglalkozása</th>
+							<td>atomfizikus</td>
+						</tr>
+						<tr>
+							<th>Házastárs</th>
+							<td>Schütz-Harkányi Auguszta<br>(Harkányi Mici)</td>
+						</tr>
+						<tr>
+							<th>Iskolái</th>
+							<td>Lipcsei Egyetem<br>Göttingeni Egyetem</td>
+						</tr>
+					</table>
+
+10. Készísen Bootstrap 4 rácsot a felsorolt (számozatlan) lista és a mellette látható táblázat igazításához!
+    A felsorolt lista és a táblázat nagy (lg) és extra nagy (xl) méretű kijelzőknél egymás mellett, annál 
+    kisebb méretű kijelzők esetén egymás alatt jelenjen meg!
+
+
+
+
+11.  Alakítsa ki a "Teller Ede" címére a forrásra hivatkozó linket! Az URL címet a forrás.txt állományban
+    találja meg. Oldja meg, hogy a hivatkozás minden esetben új oldalon nyíljon meg!
+
+    <h1><a href="https://hu.wikipedia.org/wiki/Teller_Ede" target="_blank">Teller Ede</a></h1>
+
+12.	A "Díjai" és az "Adatok" második szintű alcímek felső margóit Bootstrap osztályok alkalmazásával állítsa minimálisan
+	nagyobbra!
+
+13.	A "csak középszintű középiskolai tanár" szövegrészt tetszőleges módszert választva alakítsa dőlt betűstílusúvá!
+
+	<i>„csak középszintű középiskolai tanár”</i>
+
+14.	Állítsa be az oldal hátterének a physics_back.jpg állományt, ami ismétlés nélkül kerüljön az oldal
+	közepére függőlegesen és vísszintesen is!
+
+	body {
+  background-size: cover;
+  font-weight: 500;
+  background-image: url('physics_back.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+15.	A Teller.png kép lebegjen jobbra, szélessége 260 képpont, bal oldali margója 20 képpont legyen!
+
+	#teller_kep{
+  float: right;
+  width: 260px;
+  margin-left: 20px;
+				}
+
+16.	A táblázat adatcelláinak alsó szegélye 1 képpont vastag folytonos szürke (gray) vonal legyen,
+	és állítson be 10 képpont belső margót is! A fejléccellák előtérszíne fehér (white), háttérszíne
+	szürke (gray) legyen! Oldja meg, hogy az adat- és fejléccellákban lévő tartalom vízszintesen
+	középre legyen igazítva!
+
+	td{
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+}
+
+th{
+  color: white;
+  background-color: gray;
+  text-align: center;
+}
+
+17. A link (hivatkozás) szövege ne legyen aláhúzva egyik állapotukban sem, ha az egérkurzor
+	fölé keröl, akkor színük pirosra (red) váltson!
+
+	a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: red;
+  text-decoration: none;
+}
